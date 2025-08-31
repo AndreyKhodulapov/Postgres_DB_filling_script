@@ -13,7 +13,7 @@ class Singleton(type):
         return cls._instances[cls]
 
 
-class Settings:
+class Settings(metaclass=Singleton):
     def __init__(self, user: str, 
                   password: str, 
                   dbname: str, 
