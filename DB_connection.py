@@ -1,0 +1,11 @@
+# make singleton for postgres async connection
+
+import asyncio
+import asyncpg
+from asyncpg.pool import Pool
+from asyncpg.connection import Connection
+from asyncpg.exceptions import UniqueViolationError as asyncpg_unique_violation_error
+from asyncpg.exceptions import ForeignKeyViolationError as asyncpg_foreign_key_violation_error
+from asyncpg.exceptions import CheckViolationError as asyncpg_check_violation_error 
+from asyncpg.exceptions import NotNullViolationError as asyncpg_not_null_violation_error
+from asyncpg.exceptions import InvalidTextRepresentationError as asyncpg_invalid_text_representation_error
